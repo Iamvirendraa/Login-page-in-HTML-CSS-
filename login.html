@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- Created By Virendraa-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  <title>Login Page | VJ ZONE</title>
+    <link rel="stylesheet" href="style.css">
+ 
+  
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+}
+    
+::selection{
+  background: #fc9842;
+  color: #fff;
+}
+    
+.wrap{
+  width: 380px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+
+.wrap .title{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+background-color: #fc9842;
+background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
+}
+
+.wrap form{
+  padding: 10px 30px 50px 30px;
+}
+
+
+.wrap form .jaga{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+.wrap form .jaga input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.wrap form .jaga input:focus,
+form .jaga input:valid{
+  border-color: #fc9842;
+}
+
+.wrap form .jaga label{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+form .jaga input:focus ~ label,
+form .jaga input:valid ~ label{
+  top: 0%;
+  font-size: 16px;
+  color: #fc9842;
+  background: #fff;
+  transform: translateY(-50%);
+}
+
+form .content{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+form .content input{
+  width: 15px;
+  height: 15px;
+  background: red;
+}
+
+form .content label{
+  color: #262626;
+  user-select: none;
+  padding-left: 5px;
+}
+
+form .content .pwd{
+  color: "";
+}
+
+form .jaga input[type="submit"]{
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
+  transition: all 0.3s ease;
+}
+
+form .jaga input[type="submit"]:active{
+  transform: scale(0.95);
+}
+
+form .pwd a,
+form .signup a{
+  color: #fc9842;
+  text-decoration: none;
+}
+
+form .pwd a:hover,
+form .signup a:hover{
+  text-decoration: underline;
+}
+  </style>
+  
+  
+  
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="title">Login here</div>
+      <form action="#">
+        <div class="jaga">
+          <input type="text" required>
+          <label>Email Address</label>
+        </div>
+        <div class="jaga">
+          <input type="password" required>
+          <label>Password</label>
+        </div>
+        <div class="content">
+          <div class="checkbox">
+            <input type="checkbox" id="remind">
+            <label for="remember-me">Remember me</label>
+          </div>
+          <div class="pwd"><a href="#">Forgot password?</a></div>
+        </div>
+        <div class="jaga">
+          <input type="submit" value="Login">
+        </div>
+        <div class="signup">Not a member? <a href="#">Signup now</a></div>
+      </form>
+    </div>
+  </body>
+</html>
